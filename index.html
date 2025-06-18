@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>Assets Database</title>
+</head>
+<body>
+    <h1>Asset Database</h1>
+<div class ="border"></div>
+
+<form>
+    <h2>Choose From Options to Generate a Report</h2>
+<!-- section to generate a report -->
+<section id="generate-report-section">
+    <label for="product">Choose product</label>
+<select name="product" id="select-product">
+    <option value="">Select Product</option>
+</select>
+
+    <label for="brand">Choose brand</label>
+<select name="brand" id="select-brand">
+    <option value="">Select Brand</option>
+</select>
+
+    <label for="category">Choose category</label>
+<select name="category" id="select-category">
+    <option value="">Select Category</option>
+</select>
+
+<label for="deparment">Choose departmet</label>
+<select name="department" id="select-department">
+    <option value="">Select Departmet</option>
+</select>
+
+<label for="user">Choose a user</label>
+<select name="user" id="select-user">
+<option value="">Select User</option>
+</select>
+
+<label for="status">Asset Status</label>
+<select name="status" id="select-status">
+    <option value="">Select Status</option>
+</select>
+
+    <label for="purchase-date">Choose Purchase Date</label>
+<select name="purchase-date" id="select-purchase-date">
+    <option value="">Select Purchase Date</option>
+</select>
+
+    <label for="barcode">Search by barcode</label>
+<select name="barcode" id="select-barcode">
+    <option value="">Select Product</option>
+</select>
+</section>
+
+<div class ="border"></div>
+
+<!-- report goes here -section -->
+<section id="report-content-section">
+    <h2>Your Report</h2>
+    <div id="report-field" value="report-field">
+    <tbody id="report-table">
+    </tbody>
+</table>
+    </div>
+</section>
+
+<div class ="border"></div>
+
+<!-- section to add new assets -->
+     <h2>Fill-in All Fields to Add a New Asset to the Database</h2>
+<section id="addAsset-section">
+    <label for="addProduct">Product</label>
+    <input type="text" id="addProduct" placeholder="type name" required>
+        <label for="addCategory" >Category</label>
+    <input type="text" id="addCategory" placeholder="type category" required>
+        <label for="addBrand" >Brand</label>
+    <input  type="text" id="addBrand" placeholder="type brand" required>
+        <label for="addDepartment" >Department</label>
+    <input type="text" id="addDepartment" placeholder="type dept" required>
+        <label for="addUser" >User</label>
+    <input type="text" id="addUser" placeholder="type user name" required>
+        <label for="addBarcode" >Barcode</label>
+    <input type="text" id="addBarcode" placeholder="type barcode" required>
+        <label for="addPurchaseDate" >Purchase Date</label>
+    <input type="text"  id="addPurchaseDate" placeholder="type date" required>
+        <label for="addStatus">Status</label>
+    <input type="text" id="addStatus" placeholder="type status" required>
+
+<button class="btn" type="submit" id="submit-entry">Add</button>
+
+</section>
+<div class ="border"></div>
+
+<!-- section to delete an asset from the database -->
+     <h2>Choose a barcode from Existing Assets to Delete an Asset</h2>
+<section id="delete-section">
+<label for="select-delete"></label>
+<select name="select-delete" id="select-delete">
+    <option value="">Select a barcode</option>
+
+</select>
+<button class="btn" type="button" id="select-delete-btn">Delete</button>
+</section>
+
+<div class ="border"></div>
+
+</form>
+</body>
+</html>
