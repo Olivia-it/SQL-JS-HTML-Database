@@ -56,13 +56,29 @@
 </select>
 </section>
 
+<p id="doesntExist"></p>
+
 <div class ="border"></div>
 
 <!-- report goes here -section -->
 <section id="report-content-section">
     <h2>Your Report</h2>
     <div id="report-field" value="report-field">
-    <tbody id="report-table">
+
+<table id="report-table">
+    <thead>
+        <tr>
+        <th>Product Name</th>
+        <th>Category</th>
+        <th>Brand</th>
+        <th>Barcode</th>
+        <th>Purchase Date</th>
+        <th>Status</th>
+        <th>User</th>
+        <th>Department</th>
+        </tr>
+    </thead>
+    <tbody id="table-body">
     </tbody>
 </table>
     </div>
@@ -84,29 +100,64 @@
         <label for="addUser" >User</label>
     <input type="text" id="addUser" placeholder="type user name" required>
         <label for="addBarcode" >Barcode</label>
-    <input type="text" id="addBarcode" placeholder="type barcode" required>
+    <input type="number" id="addBarcode" placeholder="type barcode" required>
         <label for="addPurchaseDate" >Purchase Date</label>
     <input type="text"  id="addPurchaseDate" placeholder="type date" required>
         <label for="addStatus">Status</label>
     <input type="text" id="addStatus" placeholder="type status" required>
 
-<button class="btn" type="submit" id="submit-entry">Add</button>
-
+<button class="btn" type="button" id="submit-entry">Add</button>
 </section>
+<p id="add-confirmation-text" class="allertText"></p>
 <div class ="border"></div>
 
 <!-- section to delete an asset from the database -->
-     <h2>Choose a barcode from Existing Assets to Delete an Asset</h2>
+    <h2>Choose a barcode from Existing Assets to Delete an Asset</h2>
 <section id="delete-section">
 <label for="select-delete"></label>
 <select name="select-delete" id="select-delete">
     <option value="">Select a barcode</option>
-
 </select>
+
 <button class="btn" type="button" id="select-delete-btn">Delete</button>
 </section>
+<p id="delete-confirmation-text" class="allertText"></p>
 
 <div class ="border"></div>
+
+<!-- todo section to update entry -->
+ <h2>Choose a barcode from Existing Assets to Update an Asset</h2>
+<section id="update-section">
+<label for="select-update"></label>
+<select name="select-update" id="select-update">
+    <option value="">Select a barcode</option>
+</select>
+
+<section id="updateAsset-section">
+    <label for="updateProduct">Product</label>
+    <input type="text" id="updateProduct" placeholder="type name" required>
+        <label for="updateCategory" >Category</label>
+    <input type="text" id="updateCategory" placeholder="type category" required>
+        <label for="updateBrand" >Brand</label>
+    <input  type="text" id="updateBrand" placeholder="type brand" required>
+        <label for="updateDepartment" >Department</label>
+    <input type="text" id="updateDepartment" placeholder="type dept" required>
+        <label for="updateUser" >User</label>
+    <input type="text" id="updateUser" placeholder="type user name" required>
+        <label for="updateBarcode" >Barcode</label>
+    <input type="number" id="updateBarcode" placeholder="type barcode" required>
+        <label for="updatePurchaseDate" >Purchase Date</label>
+    <input type="text"  id="updatePurchaseDate" placeholder="type date" required>
+        <label for="updateStatus">Status</label>
+    <input type="text" id="updateStatus" placeholder="type status" required>
+
+
+<button class="btn" type="button" id="select-update-btn">Update</button>
+</section>
+<p id="update-confirmation-text" class="allertText"></p>
+
+<div class ="border"></div>
+
 
 </form>
 </body>
